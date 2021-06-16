@@ -1,4 +1,4 @@
-FROM  python:latest
+FROM python:alpine3.13
 WORKDIR /app
 COPY requirements.txt ./
 COPY Utils.py ./
