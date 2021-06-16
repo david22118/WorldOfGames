@@ -1,8 +1,8 @@
-FROM python:3.8-slim-buster
+FROM python:alpine3.13
 WORKDIR /app
-RUN pip3 install Flask
 COPY Utils.py ./
 COPY MainScores.py ./
-COPY Scores.txt ./
+COPY scores.txt ./
 EXPOSE 8777
-CMD ["python3" , "MainScores.py"]
+RUN pip install Flask
+CMD ["python" , "MainScores.py"]
