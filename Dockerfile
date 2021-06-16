@@ -5,4 +5,4 @@ COPY Utils.py ./
 COPY MainScores.py ./
 COPY Scores.txt ./
 EXPOSE 8777
-CMD [ "python3" , "MainScores.py"]
+CMD ["python3" , "MainScores.py"]
