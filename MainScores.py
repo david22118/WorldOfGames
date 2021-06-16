@@ -43,3 +43,7 @@ def server_error(err):
 def score_server():
     content = read_content()
     return content_message(content)
+
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=8777)
