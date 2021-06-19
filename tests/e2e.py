@@ -34,4 +34,3 @@ def main_function(url):
 
 
 main_function(score_game_url)
-
