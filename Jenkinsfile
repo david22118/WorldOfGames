@@ -7,7 +7,7 @@ node{
         bat "docker run -d -p 8777:8777 --name games_container --mount source=myvol,target=/app games"
     }
     stage("Run test"){
-        bat  "cd test"
+        bat  "cd tests"
         bat  "python e2e.py"
     }
     stage("Push to DockerHub"){
