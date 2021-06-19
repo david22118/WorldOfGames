@@ -14,7 +14,7 @@ node{
         bat  "bat 'docker push davidy22118/games'"
     }
      stage("Terminate container"){
-        bat  "docker rm -vf $(docker ps -a -q)"
-        bat  "docker rmi -f $(docker images -a -q)"
+        bat 'docker rm -vf games_container'
+        bat 'docker image rm -f games'
     }
 }
