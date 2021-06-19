@@ -7,13 +7,13 @@ node{
         bat "docker run -d -p 8777:8777 --name games_container --mount source=myvol,target=/app games"
     }
     stage("Run test"){
-        bat  "cd tests && python e2e.py"
+        bat "cd tests && python e2e.py"
     }
     stage("Push to DockerHub"){
-        bat  "bat 'docker push davidy22118/games'"
+        bat "docker push davidy22118/games"
     }
      stage("Terminate container"){
-        bat 'docker rm -vf games_container'
-        bat 'docker image rm -f games'
+        bat "docker rm -vf games_container"
+        bat "docker image rm -f games"
     }
 }

@@ -28,9 +28,9 @@ def test_scores_service(url):
 def main_function(url):
     status = test_scores_service(url)
     if status:
-        return 0
+        print(0)
     else:
-        return -1
+        print(-1)
 
 
 main_function(score_game_url)
