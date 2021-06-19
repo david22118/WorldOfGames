@@ -10,6 +10,7 @@ node{
         bat "cd tests && python e2e.py"
     }
     stage("Push to DockerHub"){
+        bat "docker tag games davidy22118/games"
         bat "docker push davidy22118/games"
     }
      stage("Terminate container"){
