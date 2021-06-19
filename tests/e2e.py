@@ -5,7 +5,7 @@ chrome_options = Options()
 chrome_options.add_argument("--headless")
 browser = webdriver.Chrome(executable_path="c:/chromedriver.exe", options=chrome_options)
 
-score_game_url = 'http://127.0.0.1:5000/get_score'
+score_game_url = 'http://127.0.0.1:8777/get_score'
 error_message = "Error 404"
 success_message = "The score is"
 
