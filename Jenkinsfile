@@ -10,4 +10,11 @@ node{
         bat  "cd test"
         bat  "python e2e.py"
     }
+    stage("Push to DockerHub"){
+        bat  "bat 'docker push davidy22118/games'"
+    }
+     stage("Terminate container"){
+        bat  "docker rm -vf $(docker ps -a -q)"
+        bat  "docker rmi -f $(docker images -a -q)"
+    }
 }
